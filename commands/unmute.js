@@ -2,7 +2,7 @@ const {MessageEmbed} = require('discord.js');
 const {caseNumber} = require('../util/caseNumber.js');
 const {parseUser} = require('../util/parseUser.js');
 
-exports.run = async (client, message, args) => {
+exports.run = async (client, message, args) => { // eslint-disable-line no-unused-vars
   const user = message.mentions.users.first() || message.guild.members.get(args[0]).user;
   parseUser(message, user);
   const modlog = message.guild.channels.find('name', 'mod-log');
